@@ -3,9 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "89e5f7823c33bbf9ed4e9b6cdb4f2c62",
+  "assets/AssetManifest.json": "0f16415134322c479755b8df455da57d",
+"assets/assets/icons/android.png": "7a4255d61b5bd6495314a7d56efc3996",
 "assets/assets/icons/destination_pin.png": "cfef6f2a195835fc9b032ab805106868",
 "assets/assets/icons/green-car.png": "8176288e2317ecadd5d084656364f5de",
+"assets/assets/icons/ios.png": "3bf0d18beeba624e9ef86cce8abb94ad",
 "assets/assets/icons/logo.png": "75a3a9a5f30ab94f8d69cf97ecb97aed",
 "assets/assets/icons/logoOLD.png": "26c8bf4d404cb7d921f79e5e104153fb",
 "assets/assets/icons/red-car.png": "9129c6d48890783963591c3b94e19945",
@@ -37,9 +39,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "75b90de5ee2183f1d7dfc19941d06347",
 "icons/Icon-maskable-192.png": "8bf7b8121658a48fed583773949faa4b",
 "icons/Icon-maskable-512.png": "75b90de5ee2183f1d7dfc19941d06347",
-"index.html": "487c9c76015b3821f06bb6e6a7a126cd",
-"/": "487c9c76015b3821f06bb6e6a7a126cd",
-"main.dart.js": "886462552af49b1fd332b93ccd6e3ee5",
+"index.html": "352d10455f81d95f35c9d95d9170935c",
+"/": "352d10455f81d95f35c9d95d9170935c",
+"main.dart.js": "68d845315c2319a5d71ba7d8ce4e53a4",
 "manifest.json": "66b6501725bfa6af3e096792b65e5a67",
 "version.json": "a17fac7a1ba7b5879f73019d57fab115"
 };
