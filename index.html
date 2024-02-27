@@ -30,33 +30,34 @@
   <link rel="manifest" href="manifest.json">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwwpJdPfJhOLUoW83zf3EKrGkUdBrGhtU&libraries=drawing,visualization,places"></script>
 <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwwpJdPfJhOLUoW83zf3EKrGkUdBrGhtU&libraries=places&callback=initMap"></script>-->
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
 </head>
 <body>
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCCLLuRp4QNAXWW6U7JWJ1fb7IDVamg70w",
-    authDomain: "vrapon-49003.firebaseapp.com",
-    projectId: "vrapon-49003",
-    storageBucket: "vrapon-49003.appspot.com",
-    messagingSenderId: "64011481291",
-    appId: "1:64011481291:web:eebac19e9b04a9ea396b4e",
-    measurementId: "G-PFS922WVYM"
-  };
+<!--<script type="module">-->
+<!--  // Import the functions you need from the SDKs you need-->
+<!--  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";-->
+<!--  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";-->
+<!--  // TODO: Add SDKs for Firebase products that you want to use-->
+<!--  // https://firebase.google.com/docs/web/setup#available-libraries-->
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const firestore = getFirestore(app);
-</script>
+<!--  // Your web app's Firebase configuration-->
+<!--  // For Firebase JS SDK v7.20.0 and later, measurementId is optional-->
+<!--  const firebaseConfig = {-->
+<!--    apiKey: "AIzaSyCCLLuRp4QNAXWW6U7JWJ1fb7IDVamg70w",-->
+<!--    authDomain: "vrapon-49003.firebaseapp.com",-->
+<!--    projectId: "vrapon-49003",-->
+<!--    storageBucket: "vrapon-49003.appspot.com",-->
+<!--    messagingSenderId: "64011481291",-->
+<!--    appId: "1:64011481291:web:eebac19e9b04a9ea396b4e",-->
+<!--    measurementId: "G-PFS922WVYM"-->
+<!--  };-->
+
+<!--  // Initialize Firebase-->
+<!--  const app = initializeApp(firebaseConfig);-->
+<!--  const firestore = getFirestore(app);-->
+<!--</script>-->
 
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
@@ -64,7 +65,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=1917417358');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=3419456608');
       });
     }
   </script>
