@@ -28,10 +28,6 @@
 
   <title>VrapOn Admin</title>
   <link rel="manifest" href="manifest.json">
-  <script>
-   <!--    The value below is injected by flutter build, do not touch.-->
-    var serviceWorkerVersion = '2570565621';
-  </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwwpJdPfJhOLUoW83zf3EKrGkUdBrGhtU&libraries=drawing,visualization,places"></script>
 <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwwpJdPfJhOLUoW83zf3EKrGkUdBrGhtU&libraries=places&callback=initMap"></script>-->
   <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
@@ -68,29 +64,8 @@
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
     if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function (ev) {
-        // Download main.dart.js
-        // ADD THIS LINE
-        navigator.serviceWorker.register('/firebase-messaging-sw.js');
-
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: serviceWorkerVersion,
-          },
-          onEntrypointLoaded: function (engineInitializer) {
-            engineInitializer.initializeEngine().then(function (appRunner) {
-              appRunner.runApp();
-            });
-          }
-        });
-      });
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=2570565621');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1234177402');
       });
     }
   </script>
