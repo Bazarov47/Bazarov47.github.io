@@ -28,7 +28,13 @@
 
   <title>VrapOn Admin</title>
   <link rel="manifest" href="manifest.json">
-  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwwpJdPfJhOLUoW83zf3EKrGkUdBrGhtU&loading=async&libraries=drawing,visualization,places&callback=initMap"></script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwwpJdPfJhOLUoW83zf3EKrGkUdBrGhtU&loading=async&libraries=drawing,visualization,places"></script>
+  <script>
+    // Provide a no-op initMap callback for the Google Maps script on web.
+    // This prevents "initMap is not a function" errors when the login page
+    // is loaded before any map widgets are rendered.
+    window.initMap = function() {};
+  </script>
   <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-messaging-compat.js"></script>
@@ -63,6 +69,31 @@
 <!--  const firestore = getFirestore(app);-->
 <!--</script>-->
 
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function (ev) {
+      // Register Firebase messaging service worker
+      navigator.serviceWorker.register('/firebase-messaging-sw.js');
+
+      var serviceWorkerUrl =
+          'flutter_service_worker.js?v=' + serviceWorkerVersion;
+
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+    window.addEventListener('flutter-first-frame', function () {
+      navigator.serviceWorker.register('flutter_service_worker.js?v=1170617125');
+    });
+  }
+</script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
